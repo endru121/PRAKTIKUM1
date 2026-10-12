@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lan="id">
+<head>
+	<!---MENGATUR KARAKTER DAN RESPONSIVITAS LAYAR-->
+	<meta charset="UTF-8">
+	<meta name="viewpoert" content="width=device-width,initial.scale=1.0">
+	<titile>Profile - Yohanes Andre</titile>
+	<!---MEMBUAT GOOGLE FONTS AGAR TAMPILAN TEKS LEBIH RAPI DAN MODERN-->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+	<!--Bagian CSS Internal untuk styling Halaman-->
+	<style>
+		/* Mengatur font dasar dan warna latar belakang utama */
+		body {
+			font-family: 'inter', sans-serif;
+			background-color: rgb(103, 111, 103);
+			color: rgb(250, 250, 250);
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			min-height: 100vh;
+		}
+		/* Kontainer utama portofolio berbentuk kartu di tengah layar */
+		.container {
+			background-color: rgb(25, 42, 79);
+			width: 90%;
+			max-width: 600px;
+			margin: 40px auto;
+			padding: 30px;
+			border-radius: 20px;
+			box-shadow: 0 10px 25px rgba(0,0,0,o.1);
+			text-align: center;
+		}
+		/* Styling foto profil / logo */
+		.profile-img {
+			width: 130px;
+			height: 130px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 4px solid;
+			margin-bottom: 15px;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+		}
+		/* Styling nama utama */
+		h1 {
+			color:rgb(247, 247, 244);
+			margin: 10px 0 5px 0;
+			font-size: 28px;
+		}
+		/* Styling subjudul status mahasiswa */
+		h5 {
+			color: rgb(210, 213, 171);
+			font-weight: 500;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		/* Garis pemisah antar bagian */
+		hr {
+			border: 0;
+			height: 1px;
+			background: #e2e8f0 ;
+			margin: 25px 0;
+		}
+		/* Styling judul bagian (biografi dan keterampilan dan lainnya) */
+		h3 {
+			color: rgb(251, 251, 255);
+			font-size: 18px;
+			text-align: left;
+			border-left: 4px solid #f8f8fc;
+			padding-left: 10px;
+			margin-bottom: 10px;
+		}
+		/* Styling teks paragraf*/
+		 p {
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #939aa7;
+		 }
+		 /* Styling daftar hobi */
+		ol{
+			text-align: left;
+			padding-left: 20px;
+			font-size: 14px;
+			color:#939aa7;
+		}
+		ol li {
+			margin-bottom: 6px;
+		}
+		/* Styling daftar tautan kontak */
+		ul.contact-list {
+			list-style: none;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			justify-content: center;
+			margin-top: 15px;
+		}
+		ul.contact-list li a {
+			display: inline-block;
+			padding: 8px 16px;
+			background-color: #f7fafc;
+			color: #52437b;
+			border: 1px solid #cbd5e0;
+			border-radius: 8px;
+			text-decoration: none;
+			font-size: 13px;
+			font-weight: 600;
+			transition: all 0.2s ease;
+		}
+		/* Efek saat kursos menyentuh tombol kontak*/
+		ul.contact-list li a:hover {
+			background-color: rgb(79, 63, 43);
+			color: #ffffff;
+			border-color: #52437b;
+			transform: translateY(-2px);
+		}
+
+		/* Styling tombol interaktif sapaan */
+		.btn-greet {
+			background-color: rgb(79, 63, 43);
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 8px;
+			font-size: 14px;
+			font-weight: 600;
+			cursor: pointer;
+			margin-top: 15px;
+			transition: background-color 0.2s, transform 0.1s;
+		}
+		.btn-greet :hover {
+			background-color: #c06fcf;
+		} 
+		.btn-greet:active {
+			transform: scae(0.95);
+		}
+	</style>
+</head>
+<body>
+	<!--Kontainer Kartu Portofolio-->
+	<div class="container">
+		<!---Foto profil dengan gambar cadangan jika gambar tidak ada-->
+		<img src="WhatsApp Image 2026-10-09 at 20.41.14.jpeg" 
+		onerror="this.src='https://placehold.co/300x300/52437b/ffffff?text=Yohanes';" 
+		width="130"
+		alt="Foto Profil Yohanes Andre"
+		class="profile-img">
+		<!--Nama Utama Portofolio-->
+		<h1>YOHANES ANDRE</h1>
+		<h5>Mahasiswa Teknik Informatika Universitas Semarang</h5>
+
+		<!--tombol interaktif sederhana (JavaScript Triger)-->
+		<button class="btn-greet" onclick="SapaPengunjung()">Sapa pengunjung saya</button>
+		<hr>
+		<!---Bagian Biografi Singkat-->
+		<section>
+			<h3>Biografi Singkat</h3>
+			<p>Nama saya Yohanes Andre, asal dari Semarang.</p>
+			<p>Saya seorang pemuda yang senang belajar hal baru terutama teknologi dan bermusik. Saya termasuk orang yang mudah bergaul dan humoris. Memiliki pengharapan dapat berkarir di bidang IT.</p>
+		</section>
+		<hr>
+		<!--Bagian Keterampilan-->
+		<section>
+			<h3>Keterampilan</h3>
+			<P>Bermain musik</P>
+			<p>Sedikit mengetahui Website Dasar</p>
+			<p>Dapat mengoperasikan Microsoft Word</p>
+			<P>Manajemen Waktu yang baik</P>
+		</section>
+		<hr>
+		<!--Bagian Hobi-->
+		<section>
+			<h3>Hobi</h3>
+			<ol type="1">
+				<li>Bermain Musik</li>
+				<li>Nonton Bola</li>
+				<li>Nonton film</li>
+			</ol>
+		</section>
+		<hr>
+		<!--Bagian Kontak dan media sosial-->
+		<section>
+			<h3>Kontak</h3>
+			<ul class="contact-list">
+				<li><a href="https://www.instagram.com/enndrruu?xtok=MXBwZ242bnh6c2E3dw%3D%3D&utm_source=qr" 
+					target="_blank">instagram</a></li>
+				<li><a href="https://www.tiktok.com/@endruu._0?_r=1&_t=ZS-9APmQGdXCfE" 
+					target="_blank">Tiktok</a></li>
+					<li><a href="#" onclick="alertAboutMe()">About Me</a></li>
+					<li><a href="mailto:yohanesandre2009@gmail.com">Email</a></li>
+			</ul>
+		</section>
+	</div>
+	<!--Bagian JavaScript Untuk Interaksi sederhana-->
+	<script>
+		/// Fungsi untuk menampilkan pesan sapaan interaktif 
+		function SapaPengunjung() {
+			alert ("Halo! Terimakasih sudah mengunjungi portofolio sderhana saya, Salam hangat Yohanes Andre");
+		}
+		/// Fungsi khusus untuk tautan 'About Me' agar tampil elegan tanpa mengubah halaman 
+		function alertAboutMe() {
+			alert("Informasi: Halaman ini adalah portofolio pribadi Yohanes Andre, Mahasiswa Teknik Informatika USM.");
+		}
+	</script>
+</body>
+</html>
